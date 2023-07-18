@@ -1,0 +1,169 @@
+*
+{
+    box-sizing: border-box;
+}
+body 
+{ 
+    background-color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 100vh;
+}
+.container
+{
+    background-color: white;
+    border-radius:5px ;
+    box-shadow: 10px 20px 25px rgb(0,0,0,.3);
+    overflow: hidden;
+    max-width: 100%;
+    width: 400px;
+}
+.head
+{
+    border-bottom: 1px solid yellow;
+    background-color: #f7f7f7;
+    padding: 20px 40px;
+}
+.head h2{
+    margin: 0;
+    text-align: center;
+}
+.form
+{
+    padding: 30px 40px;
+}
+.form_control
+{
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+  position: relative;
+}
+.form_control label
+{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+.form_control input
+{
+    border: 2px solid cyan;
+    border-radius: 4px;
+    display: block;
+    box-sizing: 14px;
+    padding: 10px;
+    width: 100%;
+}
+/* focus is a zudo element */
+.form_control input:focus
+{
+    outline: none;
+    border-color:mediumpurple;
+}
+/* .sucess is a class using a java script */
+.form_control.success input
+{
+    border-color:green;   
+}
+/* .error is a class using a java script */
+.form_control.error input
+{
+    border-color: red;   
+}
+.form_control i
+{
+    visibility: hidden;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+ .form_control.success i.fa-check-circle
+ {
+    color: #2ecc71;
+    visibility: visible;
+ }
+ .form_control.error i.fa-exclamation-circle
+ {
+   color: red;
+   visibility: visible;
+ }
+ .form_control small
+ {
+    color: red;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    visibility: hidden;
+ }
+ 
+.form_control.form_control.error small
+{
+    visibility: visible;
+}
+.form button
+{
+  background-color: blue;
+  border: none;
+  color: white;
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.form button:hover
+{
+    color: red;
+    cursor: pointer;
+}
+.form:visited
+{
+    color: crimson;
+}
+
+.form_control label
+{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+#username:focus + label
+{
+    top: -8px;
+    font-size: 15px;
+    background-color: white;
+}
+#email:focus + label
+{
+    top: -8px;
+    font-size: 15px;
+    background-color: white;
+}
+#password:focus +label
+{
+   top: -8px;
+    font-size: 15px;
+    background-color: white;
+}
+#confirm_password:focus + label
+{
+   top: -8px;
+    font-size: 15px;
+    background-color: white;
+}
+
+  /* .form_input:not(:placeholder-shown).form_input:not(:focus)+ .form_lable */
+    .container .form_control input:focus ~label,
+    .container .form_control input:valid ~ label
+    {  
+        top: -8px;
+        font-size: 15px;
+        background-color: white;
+    } 
+
